@@ -1,0 +1,286 @@
+/* for all */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background-image: linear-gradient(to left, #e004ef, #17787c);
+  color: #fff;
+}
+
+/* header */
+.container1 {
+  width: 1280px;
+  margin: auto;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
+  padding: 0 20px 0 35rem;
+}
+
+#header h2 {
+  font-size: 2rem;
+  padding: 12px 0 0 1rem;
+}
+
+#header img {
+  height: 4rem;
+  width: 3rem;
+  margin-top: 1rem;
+}
+
+.user-input {
+  margin: 4rem 0 0 24rem;
+  width: 37rem;
+  text-align: center;
+}
+
+.user-input input {
+  width: 75%;
+  outline: none;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.user-input input:focus {
+  box-shadow: 0 0 5px #E22865;
+  border: 1px solid #E22865;
+}
+
+.user-input button {
+  color: #188a6d;
+  font-weight: 600;
+  font-family: system-ui;
+  cursor: pointer;
+  padding: 8px;
+  width: fit-content;
+  transition: 1s;
+  outline: none;
+  background-color: aliceblue;
+  border: 1px solid lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.user-input button:hover {
+  background-color: rgb(55, 134, 202);
+  color: white;
+}
+
+/* task list */
+.container {
+  margin: auto;
+  width: 36%;
+  padding: 2rem 0 0rem 5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+ul li:focus {
+  box-shadow: 0 0 5px #E22865;
+  border: 1px solid #E22865;
+}
+
+ul li:hover {
+  background: #a1a5a5;
+}
+
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-family: sans-serif
+}
+
+#list label:before {
+  content: '';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#list input:checked+label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#list input:checked+label:before {
+  background: #2c8fc9;
+}
+
+#list input:checked+label {
+  text-decoration: line-through;
+}
+
+.delete-task {
+  height: 28px;
+  border-radius: 3px;
+}
+
+.delete-task:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.checkTask {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.checkTask span {
+  font-family: sans-serif;
+  font-weight: 900;
+  color: #00ffa3;
+}
+
+/* responsiveness */
+@media(max-width: 1777px) {
+  ul li {
+    min-width: 35rem;
+  }
+}
+
+@media(max-width: 1438px) {
+  ul li {
+    margin-left: -56px;
+  }
+}
+
+@media(max-width: 1081px) {
+  .checkTask {
+    width: 185%;
+  }
+}
+
+@media(max-width: 1062px) {
+  ul li {
+    margin-left: -17px;
+  }
+}
+
+@media(max-width: 965px) {
+  ul li {
+    margin-left: 24px;
+  }
+
+  .checkTask {
+    width: 246%;
+  }
+}
+
+@media(max-width: 844px) {
+  .checkTask {
+    width: 297%;
+  }
+}
+
+@media(max-width: 790px) {
+  .checkTask {
+    width: 347%;
+  }
+}
+
+@media(max-width: 572px) {
+  #header {
+    padding: 44px 20px 0 31rem;
+  }
+
+  #header img {
+    height: 4rem;
+    width: 3rem;
+  }
+
+  #header h2 {
+    font-size: 3.5rem;
+  }
+
+  .user-input input {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .user-input button {
+    font-size: 3rem;
+    margin-top: 20px;
+    border: 1rem solid transparent;
+    border-radius: 3rem;
+  }
+
+  .user-input input:focus {
+    box-shadow: 0 0 50px #E22865;
+    border: 3px solid #E22865;
+  }
+
+  ul li {
+    font-size: 3rem;
+    width: 45rem;
+    height: 7rem;
+  }
+
+  #list input:checked+label:after {
+    top: 17px;
+  }
+
+  .delete-task {
+    height: 43px;
+  }
+
+  .checkTask {
+    width: 49rem;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+  }
+}

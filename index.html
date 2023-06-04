@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>To Do List</title>
+  <script src="https://kit.fontawesome.com/9895dc2e85.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <main>
+    <!-- heading and input to add tasks -->
+    <div class="container1">
+      <div id="header">
+        <img src="images/checklist.png" alt="To do list icon">
+        <h2>To Do List</h2>
+      </div>
+      <div class="user-input">
+        <input type="text" id="input" placeholder="Enter your new task......"><button id="add_item">Add Task</button>
+      </div>
+    </div>
+
+    <!-- tasks list -->
+    <section>
+      <div class="container">
+        <ul id="list"></ul>
+        <div class="checkTask">
+          <span>Total tasks: <span id="taskNumber"> 0 </span></span>
+          <span>Done: <span id="taskDone"> 0 </span></span>
+          <span>Not Done: <span id="tasknotDone"> 0 </span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
